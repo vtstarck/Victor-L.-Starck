@@ -408,3 +408,59 @@ header.scrolled {
         font-size: 26px;
     }
 }
+/* --- Ticker / Letreiro Digital --- */
+.news-ticker {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #000; /* Preto absoluto para contraste */
+    border-top: 1px solid var(--accent);
+    overflow: hidden;
+    z-index: 1500;
+    display: flex;
+    align-items: center;
+    font-family: 'Courier New', monospace; /* Fonte estilo Terminal/Bolsa */
+}
+
+.ticker-track {
+    display: flex;
+    width: 200%; /* Espaço para duas cópias do conteúdo */
+    animation: ticker-scroll 20s linear infinite;
+}
+
+.ticker-content {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.ticker-item {
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ticker-item i {
+    color: #25d366; /* Verde para setas de alta */
+}
+
+/* Animação do deslocamento */
+@keyframes ticker-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* --- Ajuste do Botão WhatsApp (para não cobrir o ticker) --- */
+.whatsapp-btn {
+    bottom: 60px !important; /* Sobe o botão para 60px do fundo */
+}
+.news-ticker:hover .ticker-track {
+    animation-play-state: paused;
+}
