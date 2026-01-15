@@ -461,6 +461,3 @@ header.scrolled {
 .whatsapp-btn {
     bottom: 60px !important; /* Sobe o botão para 60px do fundo */
 }
-.news-ticker:hover .ticker-track {
-    animation-play-state: paused;
-}
