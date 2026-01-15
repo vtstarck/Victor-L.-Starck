@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicinal | Frequência Verde</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reutilizando estilo base da área secreta */
+        :root { --bg-color: #050a07; --card-bg: #0d1410; --text-primary: #e0e0e0; --text-secondary: #8f9e95; --neon-green: #00ff88; --font-tech: 'Space Mono', monospace; --font-body: 'Inter', sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-primary); font-family: var(--font-body); padding: 40px; }
+        .back-btn { color: var(--neon-green); text-decoration: none; font-family: var(--font-tech); margin-bottom: 20px; display: inline-block; }
+        .back-btn:hover { text-decoration: underline; }
+        
+        .thread-header { border-bottom: 1px solid rgba(0,255,136,0.2); padding-bottom: 20px; margin-bottom: 30px; }
+        .tag { background: rgba(0,255,136,0.1); color: var(--neon-green); padding: 2px 8px; font-size: 0.8rem; font-family: var(--font-tech); }
+        h1 { margin-top: 10px; font-family: var(--font-tech); }
+
+        .post { background: var(--card-bg); padding: 30px; border-left: 3px solid var(--neon-green); margin-bottom: 20px; }
+        .author { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; font-family: var(--font-tech); font-size: 0.9rem; color: var(--neon-green); }
+        .content { line-height: 1.8; color: #ccc; }
+        .content strong { color: #fff; }
+        
+        .comment { margin-left: 50px; border-left: 1px solid #333; padding-left: 20px; margin-top: 20px; }
+        .comment .author { color: var(--text-secondary); }
+    </style>
+</head>
+<body>
+
+    <a href="secret-forum.html" class="back-btn"><i class="fas fa-arrow-left"></i> VOLTAR AO FEED</a>
+
+    <header class="thread-header">
+        <span class="tag">MEDICINAL</span>
+        <h1>O Sistema Endocanabinoide e a Ansiedade</h1>
+    </header>
+
+    <div class="post">
+        <div class="author"><i class="fas fa-user-astronaut"></i> Victor_Admin [OP]</div>
+        <div class="content">
+            <p>Tenho estudado a relação entre os receptores <strong>CB1</strong> (predominantes no sistema nervoso central) e a modulação de cortisol. A literatura sugere que microdoses de THC podem atuar como ansiolíticos, enquanto doses altas geram o efeito oposto (efeito bifásico).</p>
+            <br>
+            <p>Alguém aqui tem experiência prática com proporções 1:1 (CBD:THC) para tratamento de TAG (Transtorno de Ansiedade Generalizada)? Estou compilando dados para um artigo futuro.</p>
+        </div>
+    </div>
+
+    <div class="comment">
+        <div class="author">Dr_Green [Membro VIP]</div>
+        <div class="content">
+            <p>Ótimo ponto, Victor. A chave é o efeito comitiva (entourage effect). Isolar o canabinoide perde a eficácia dos terpenos como o Limoneno e Linalool, que são fundamentais para o relaxamento.</p>
+        </div>
+    </div>
+
+</body>
+</html>

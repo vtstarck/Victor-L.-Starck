@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Macro | Frequência Verde</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #050a07; color: #e0e0e0; font-family: 'Space Mono', monospace; padding: 20px; text-align: center; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 30px; }
+        .img-box { border: 1px solid #00ff88; height: 300px; overflow: hidden; position: relative; }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: 0.5s; }
+        .img-box:hover img { filter: grayscale(0%); transform: scale(1.1); }
+        .caption { position: absolute; bottom: 0; background: rgba(0,0,0,0.8); width: 100%; padding: 5px; color: #00ff88; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <a href="secret-forum.html" style="color: #00ff88;">[ VOLTAR ]</a>
+    <h1 style="margin-top: 20px;">MACRO TRICOMAS_V.1</h1>
+    <p>Capturas feitas com Poco X5 + Lente Macro Externa.</p>
+
+    <div class="gallery">
+        <div class="img-box">
+            <img src="https://images.unsplash.com/photo-1556630606-258079b7eb97?auto=format&fit=crop&w=500&q=60" alt="Tricomas 1">
+            <div class="caption">Strain: Lemon Haze (Leitosos)</div>
+        </div>
+        <div class="img-box">
+            <img src="https://images.unsplash.com/photo-1536643653246-0b81944522d1?auto=format&fit=crop&w=500&q=60" alt="Tricomas 2">
+            <div class="caption">Strain: Purple Kush (Âmbar 20%)</div>
+        </div>
+        <div class="img-box">
+            <img src="https://images.unsplash.com/photo-1605315483248-6c0b296c6d09?auto=format&fit=crop&w=500&q=60" alt="Tricomas 3">
+            <div class="caption">Estrutura Floral</div>
+        </div>
+    </div>
+
+</body>
+</html>
