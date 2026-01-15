@@ -336,3 +336,25 @@ header.scrolled {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
 }
+/* --- Botão de Login no Menu --- */
+.login-btn {
+    border: 1px solid var(--accent);
+    padding: 8px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    color: var(--accent) !important; /* Força a cor dourada */
+}
+
+.login-btn:hover {
+    background-color: var(--accent);
+    color: var(--bg-color) !important; /* Texto fica escuro ao passar o mouse */
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); /* Brilho dourado */
+}
+
+/* Ajuste para telas pequenas (Mobile) */
+@media (max-width: 768px) {
+    .login-btn {
+        margin-top: 20px;
+        display: inline-block;
+    }
+}
