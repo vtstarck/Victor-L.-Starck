@@ -74,20 +74,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-// --- 5. Easter Egg: Acesso à Área Secreta (Cannabis Forum) ---
-    document.addEventListener('keydown', function(event) {
-        // Verifica se CTRL + SHIFT + W foram pressionados
-        if (event.ctrlKey && event.shiftKey && (event.key === 'W' || event.key === 'w')) {
+// --- 5. Easter Egg: Clique Secreto no Ponto do Logo ---
+    const secretTrigger = document.querySelector('.logo span');
+    
+    // Contador de cliques (opcional: se quiser que precise clicar 3x pra abrir)
+    // Por enquanto deixei com 1 clique só, como pediu.
+    
+    if (secretTrigger) {
+        secretTrigger.addEventListener('click', function() {
+            // Feedback visual sutil (o ponto pisca verde rápido)
+            secretTrigger.style.color = '#00ff88';
+            secretTrigger.style.textShadow = '0 0 10px #00ff88';
             
-            event.preventDefault(); // Tenta impedir que o navegador feche a aba
-            
-            // Efeito visual antes de trocar de página (Tela pisca verde)
-            document.body.style.transition = "background-color 0.2s";
-            document.body.style.backgroundColor = "#002211"; // Verde muito escuro
+            // Efeito de transição na tela
+            document.body.style.transition = "all 0.5s ease";
+            document.body.style.filter = "invert(1) hue-rotate(180deg)"; // Efeito psicodélico de "Matrix"
             
             setTimeout(() => {
-                // Redireciona para a página secreta
+                // Redireciona para o Fórum Secreto
                 window.location.href = 'secret-forum.html';
-            }, 300);
-        }
-    });
+            }, 400);
+        });
+        
+        // DICA STARK: Muda o cursor para indicar que é clicável? 
+        // Se quiser que seja 100% secreto, apague a linha abaixo.
+        secretTrigger.style.cursor = 'pointer'; 
+    }
