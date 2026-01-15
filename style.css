@@ -413,3 +413,12 @@ header.scrolled {
 .whatsapp-btn {
     bottom: 30px !important; /* Sobe o botão para 60px do fundo */
 }
+/* --- Detalhe do Easter Egg --- */
+.logo span {
+    cursor: pointer; /* Transforma o mouse em 'mãozinha' */
+    transition: text-shadow 0.3s ease;
+}
+
+.logo span:hover {
+    text-shadow: 0 0 10px #00ff88; /* Dá um brilho verde sutil ao passar o mouse */
+}
