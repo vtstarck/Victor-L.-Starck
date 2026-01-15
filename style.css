@@ -422,3 +422,112 @@ header.scrolled {
 .logo span:hover {
     text-shadow: 0 0 10px #00ff88; /* Dá um brilho verde sutil ao passar o mouse */
 }
+/* =========================================
+   CORREÇÃO MOBILE (RESPONSIVIDADE)
+   Cole isto no final do seu style.css
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* --- 1. Ajustes Gerais de Espaçamento --- */
+    section {
+        padding: 60px 20px; /* Menos borda lateral para aproveitar a tela */
+    }
+
+    /* --- 2. Cabeçalho (Header) --- */
+    header {
+        padding: 15px 20px;
+        flex-direction: column; /* Empilha o Logo e o Menu */
+        background-color: rgba(15, 17, 21, 0.98); /* Fundo sempre escuro no mobile para ler melhor */
+    }
+
+    .logo {
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap; /* Permite que os itens quebrem linha */
+        justify-content: center; /* Centraliza os links */
+    }
+
+    nav a {
+        font-size: 0.8rem; /* Texto um pouco menor */
+        letter-spacing: 1px;
+    }
+
+    /* --- 3. Hero Section (Abertura) --- */
+    .hero-content h1 {
+        font-size: 2.2rem; /* Diminui o texto gigante */
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    /* --- 4. Grids (Transforma tudo em 1 Coluna) --- */
+    .about-grid, 
+    .stats, 
+    .gallery-grid,
+    .courses-grid {
+        grid-template-columns: 1fr !important; /* Força 1 coluna */
+        gap: 30px;
+    }
+
+    /* --- 5. Ajustes Específicos --- */
+    .about-text {
+        text-align: left; /* Melhora leitura no mobile */
+    }
+    
+    .stat-box {
+        padding: 20px;
+    }
+
+    /* Aumenta a área de toque do Ponto Secreto para facilitar no dedo */
+    .logo span {
+        padding: 10px; 
+        margin: -10px; /* Truque para aumentar a área clicável sem mover o visual */
+    }
+
+    /* --- 6. Botões Flutuantes --- */
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .escape-btn {
+        width: 100%; /* Botão de sair ocupa largura total */
+        bottom: 0;
+        right: 0;
+        background-color: #000;
+        border-top: 1px solid #333;
+    }
+
+    /* --- 7. Ajustes da Área Secreta (Fórum) --- */
+    .forum-container {
+        padding: 0 15px;
+        margin-top: 20px;
+    }
+    
+    .thread-card {
+        flex-direction: column; /* Empilha título e data */
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .thread-meta {
+        text-align: left;
+        font-size: 0.7rem;
+        color: var(--neon-green);
+        opacity: 0.7;
+    }
+    
+    .welcome-section h1 {
+        font-size: 1.8rem; /* Título menor na área verde */
+    }
+}
