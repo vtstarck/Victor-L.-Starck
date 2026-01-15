@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de Membros | Victor L. Starck</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Estilos exclusivos do Dashboard */
+        .dash-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: var(--card-bg);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-color);
+            font-weight: bold;
+        }
+
+        .logout-btn {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-left: 20px;
+        }
+        .logout-btn:hover { color: #ff4d4d; }
+
+        .dash-container {
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .welcome-msg h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .course-card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .course-thumb {
+            height: 180px;
+            background-color: #222;
+            position: relative;
+        }
+
+        .course-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .course-content {
+            padding: 25px;
+        }
+
+        .course-tag {
+            font-size: 0.7rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .course-title {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .course-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background-color: #333;
+            border-radius: 2px;
+            margin-bottom: 20px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        .access-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: transparent;
+            border: 1px solid var(--text-secondary);
+            color: var(--text-primary);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .access-btn:hover {
+            background-color: var(--accent);
+            border-color: var(--accent);
+            color: var(--bg-color);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="dash-header">
+        <div class="logo">VICTOR<span>.</span> HUB</div>
+        <div class="user-info">
+            <span>Olá, Membro VIP</span>
+            <div class="user-avatar">V</div>
+            <a href="index.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</a>
+        </div>
+    </nav>
+
+    <div class="dash-container">
+        <div class="welcome-msg">
+            <h2>Meus Cursos e Conteúdos</h2>
+            <p style="color: var(--text-secondary);">Continue sua jornada de aprendizado onde parou.</p>
+        </div>
+
+        <div class="courses-grid">
+            
+            <div class="course-card">
+                <div class="course-thumb">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=60" alt="Curso Negócios">
+                </div>
+                <div class="course-content">
+                    <span class="course-tag">Negócios & Dropshipping</span>
+                    <h3 class="course-title">Masterclass Alloy Digital</h3>
+                    <p class="course-desc">Aprenda a estruturar um e-commerce do zero, desde a escolha de fornecedores de eletrônicos até a logística final.</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 75%;"></div></div>
+                    <a href="#" class="access-btn">Continuar Assistindo</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-thumb">
+                    <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=500&q=60" alt="Curso Finanças">
+                </div>
+                <div class="course-content">
+                    <span class="course-tag">Contabilidade & Investimentos</span>
+                    <h3 class="course-title">Inteligência Financeira</h3>
+                    <p class="course-desc">Como aplicar princípios contábeis para gerir seu patrimônio pessoal e analisar ações na bolsa de valores.</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 30%;"></div></div>
+                    <a href="#" class="access-btn">Continuar Assistindo</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-thumb">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=500&q=60" alt="Curso Escrita">
+                </div>
+                <div class="course-content">
+                    <span class="course-tag">Psicologia & Narrativa</span>
+                    <h3 class="course-title">Workshop: O Poder do Ainda</h3>
+                    <p class="course-desc">Técnicas de escrita criativa focadas em construção de personagens complexos e psicologia humana.</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 10%;"></div></div>
+                    <a href="#" class="access-btn">Iniciar Curso</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-thumb">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=500&q=60" alt="Curso Fotografia">
+                </div>
+                <div class="course-content">
+                    <span class="course-tag">Artes Visuais</span>
+                    <h3 class="course-title">Fotografia Urbana Mobile</h3>
+                    <p class="course-desc">Como extrair resultados profissionais usando apenas smartphones (Poco X5/Android) e edição Lightroom.</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                    <a href="#" class="access-btn">Iniciar Curso</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
