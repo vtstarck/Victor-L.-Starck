@@ -74,3 +74,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+// --- 5. Easter Egg: Acesso à Área Secreta (Cannabis Forum) ---
+    document.addEventListener('keydown', function(event) {
+        // Verifica se CTRL + SHIFT + W foram pressionados
+        if (event.ctrlKey && event.shiftKey && (event.key === 'W' || event.key === 'w')) {
+            
+            event.preventDefault(); // Tenta impedir que o navegador feche a aba
+            
+            // Efeito visual antes de trocar de página (Tela pisca verde)
+            document.body.style.transition = "background-color 0.2s";
+            document.body.style.backgroundColor = "#002211"; // Verde muito escuro
+            
+            setTimeout(() => {
+                // Redireciona para a página secreta
+                window.location.href = 'secret-forum.html';
+            }, 300);
+        }
+    });
